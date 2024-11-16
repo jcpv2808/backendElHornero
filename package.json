@@ -1,5 +1,5 @@
 {
-  "name": "API El Hornero",
+  "name": "ElHorneroAPI",
   "version": "1.0.0",
   "description": "API El Hornero",
   "main": "index.js",
@@ -8,10 +8,13 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Grupo 4",
   "license": "ISC",
   "dependencies": {
+    "API_El_Hornero": "file:",
     "cors": "^2.8.5",
+    "ElHornero": "file:",
+    "ElHorneroAPI": "file:",
     "express": "^4.21.1",
     "mongoose": "^8.8.0"
   },
