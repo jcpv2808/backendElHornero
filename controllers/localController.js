@@ -85,6 +85,7 @@ exports.agregarReserva = async (req, res) => {
       return res.status(404).json({ mensaje: 'Local no encontrado' });
     }
 
+    if(!datosReserva.nesecidadExtra || datosReserva.nesecidadExtra.trim() == "") datosReserva.nesecidadExtra = "ninguna"
     // Crear la nueva reserva
     const nuevaReserva = new ModelReserva({ ...datosReserva, local: local._id });
     await nuevaReserva.save();
