@@ -1,10 +1,10 @@
+require('dotenv').config(); 
 const ModelLocal = require("../models/localSchema.js");
 const ModelReserva = require("../models/reservaSchema.js");
 const twilio = require('twilio');
-const global = require("../config/global.js");
 
-const accountSid = global.accountSid;
-const authToken = global.authToken;
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
 // NUEVO LOCAL

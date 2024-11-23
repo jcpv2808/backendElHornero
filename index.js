@@ -1,13 +1,11 @@
+require('dotenv').config();
 const express = require('express')
 const cors = require('cors')
-const global = require("./config/global")
 
 const conectarBD = require('./config/db')
 
-const ModelReserva = require('./models/reservaSchema')
-
 const app = express()
-const port =  global.port
+const port =  process.env.PORT || 3000
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
