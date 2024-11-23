@@ -17,4 +17,7 @@ router.post("/listar/porhora", reservasController.listarReservasPorHora);
 // Ruta para listar mesas disponibles de un local en una hora específica
 router.post("/listar/mesas", reservasController.listarMesasDisponibles);
 
+// Ruta para verificar codigo de reserva
+router.post("/verificarCodigo", reservasController.verificarCodigo);
+
 module.exports = router;

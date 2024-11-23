@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 const ReservaSchema = new mongoose.Schema(
     {
         local: {
-            type: mongoose.Schema.Types.ObjectId, // Cambiado para referenciar un local
-            ref: 'Local', // Relacionado con el modelo 'Local'
+            type: mongoose.Schema.Types.ObjectId, 
+            ref: 'Local', 
             required: true
         },
         cantPersonas: {
@@ -51,6 +51,14 @@ const ReservaSchema = new mongoose.Schema(
         celCliente: {
             type: String,
             required: true
+        },
+        codigoConfirmacion: {  // Campo para almacenar el código de confirmación
+            type: String,
+            required: false
+        },
+        confirmada: { // Campo para marcar si la reserva ha sido confirmada
+            type: Boolean,
+            default: false
         }
     },
     {
